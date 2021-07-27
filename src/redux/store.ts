@@ -24,6 +24,9 @@ import { QaPagingSlice } from "./detailQaSlice/fetchQaPagingSlice"
 import { ReviewMoreSlice } from "./detailReviewSlice/fetchMoreReviewsSlice"
 import { InsertQaSlice } from "./detailQaSlice/fetchInsertQaslice"
 import { InsertHelpedNumSlice } from "./detailReviewSlice/fetchInsertHelpedNumSlice"
+import { DetailTitleSlice } from "./tabelog/fetchDetailTitleSlice"
+import { SubTitleSlice } from "./tabelog/fetchSubTitleSlice"
+import { GenreSlice } from "./tabelog/fetchGenreSlice"
 
 const persistConfig = {
   key: "root",
@@ -52,6 +55,9 @@ const rootReducer = combineReducers({
     reviewMoreSlice: ReviewMoreSlice.reducer,
     insertQaSlice: InsertQaSlice.reducer,
     insertHelpedNumSlice: InsertHelpedNumSlice.reducer,
+    detailTitleSlice: DetailTitleSlice.reducer,
+    subTitleSlice: SubTitleSlice.reducer,
+    genreSlice: GenreSlice.reducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

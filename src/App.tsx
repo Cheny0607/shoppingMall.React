@@ -9,7 +9,8 @@ import {
   SearchPage,
   ShoppingCartPage,
   PlaceOrderPage,
-  ShoppingMall
+  ShoppingMall,
+  TabeLog,
 } from "./pages";
 import {SmDetailPage} from "./components/smDetailPage/SmDetailPage"
 import { Redirect } from "react-router-dom";
@@ -49,6 +50,7 @@ function App() {
           <Route path="/search/:keywords?" component={SearchPage} />
           <Route path="/shoppingMall" component={ShoppingMall} />
           <Route path="/smDetailPage/:goodsId" component={SmDetailPage} />
+          <Route path="/tabeLog/:id" component={TabeLog}/>
           <PrivateRoute
             isAuthenticated={jwt !== null}
             path="/shoppingCart"
